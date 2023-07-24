@@ -131,7 +131,6 @@ class ContactBook:
 
             while current.next is not None:
                 if current.name > current.next.name:
-                    # Swap nodes' data
                     current.name, current.next.name = current.next.name, current.name
                     current.phone_number, current.next.phone_number = current.next.phone_number, current.phone_number
                     swapped = True
@@ -169,11 +168,6 @@ class ContactBook:
                 print("Invalid choice. Please try again.")
 
     def reopen_cb(self):
-        # Save data to a file before exiting
-        # You can implement this function to save the contacts to a file.
-        # ...
-
-        # Release memory for the dynamically allocated nodes
         temp = self.head
         while temp is not None:
             next_node = temp.next
@@ -186,9 +180,9 @@ class ContactBook:
 def main():
     cb = ContactBook()
     n = input("What is Your Name: ")
-    print("***********")
+    print("////////\\\\\\\\")
     print(n, "WELCOME TO CONTACTBOOK")
-    print("***********")
+    print("////////\\\\\\\\")
     cb.structure()
 
 if __name__ == "__main__":
